@@ -1,0 +1,464 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+body.loaded {
+  opacity: 1;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  position: relative;
+}
+
+header {
+  background-color: #000;
+  color: #fff;
+  padding: 0px;
+  position: relative;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.language {
+  display: flex;
+  background-color: hsla(0, 0%, 100%, 0.15);
+  height: 24px;
+  width: 44px;
+  box-shadow: 0px 2px 4px rgb(0 0 0 / 15%);
+  margin-right: 22px;
+  padding: 0 4px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.language p {
+  color: white;
+  font-size: 14px;
+  margin: 0px 4px;
+  display: flex;
+}
+
+.language span {
+  font-size: 17px;
+  color: white;
+  transform: translateY(1px);
+}
+
+.language:hover {
+  background-color: #AAA;
+}
+
+.search {
+  display: flex;
+  height: 32px;
+  width: 90px;
+  background-color: hsla(0, 0%, 100%, 0.15);
+  border-radius: 24px;
+  align-items: center;
+  padding: 0px 10px;
+  justify-content: space-between;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.search span {
+  color: white;
+  font-size: 12;
+  transform: translateY(2px);
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.search span:hover {
+  color: #AAA;
+}
+
+.search p {
+  color: white;
+  margin: 0px 4px;
+  font-size: 14px;
+}
+
+.search p:hover {
+  color: #AAA;
+}
+
+.account span {
+  color: white;
+  font-size: 30px;
+  transform: translateY(10px);
+  cursor: pointer;
+}
+
+.account span:hover {
+  color: #AAA;
+}
+
+footer {
+  background-color: #000;
+  text-align: center;
+  padding: 10px;
+  margin-top: 200px;
+}
+
+header .logo-type {
+  font-family: 'Bebas Neue', cursive;
+  font-weight: normal;
+  color: white;
+  font-size: 30px;
+}
+
+header nav a {
+  color: black;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+header nav a:hover,
+header nav a.active {
+  color: #AAA;
+}
+
+nav {
+  position: flex;
+  top: 10px;
+  right: 10px;
+  background-color: black;
+  padding: 10px;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  display: block;
+  padding: 10px 0px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.main-sport {
+  font-size: 10px;
+  min-height: 30.62em;
+  color: white;
+  background: linear-gradient(rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url(../img/soccer.jpg);
+  background-position: center center;
+  background-size: cover;
+  margin-bottom: 3.12em;
+  display: flex;
+  align-items: end;
+}
+
+.main-sport .container {
+  margin: 0 auto;
+  margin-bottom: 4.25em;
+}
+
+.main-sport .title {
+  font-weight: 600;
+  font-size: 3.12em;
+  margin-bottom: 0.4em;
+}
+
+.main-sport .description {
+  font-family: Arial, sans-serif;
+  font-weight: normal;
+  font-size: 1.3em;
+  line-height: 1.75em;
+  max-width: 50%;
+  margin-bottom: 1.25em;
+}
+
+.main-sport .button {
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 0.31em;
+  padding: 0.93em 1.87em;
+  color: #fff;
+  margin-right: 1.25em;
+  cursor: pointer;
+  transition: 0.3s ease all;
+  font-size: 1.12em;
+}
+
+.main-sport .button:hover {
+  background: #fff;
+  color: #000;
+}
+
+.main-sport .button i {
+  margin-right: 1.25em;
+}
+
+.container-title-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.container-title-controls h3 {
+  color: #fff;
+  font-size: 30px;
+}
+
+.container-title-controls .indicators.button {
+  background: #fff;
+  height: 3px;
+  width: 10px;
+  cursor: pointer;
+  border: none;
+  margin-right: 2px;
+}
+
+.sports-events {
+  margin-bottom: 70px;
+}
+
+.container-main {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.left-arrow,
+.right-arrow {
+  position: absolute;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.3);
+  font-size: 40px;
+  height: 50%;
+  top: calc(50% - 25%);
+  line-height: 40px;
+  width: 50px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 500;
+  transition: 0.2s ease all;
+}
+
+.left-arrow:hover,
+.right-arrow:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.left-arrow {
+  left: 0;
+}
+
+.right-arrow {
+  right: 0;
+}
+
+.carousel-container {
+  width: 100%;
+  padding: 20px 0;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+.carousel {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.sport {
+  min-width: 20%;
+  transition: 0.3s ease all;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.sport:hover img {
+  transform: scale(1.2);
+  transform-origin: center;
+  cursor: pointer;
+}
+
+.sport img {
+  width: 100%;
+  vertical-align: top;
+}
+
+/* Circular images */
+.author-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.author {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-right: 30px;
+}
+
+.author img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 0;
+  margin-bottom: 10px;
+  border: 2px solid #fff;
+}
+
+.text-content-author {
+  text-align: center;
+}
+
+.text-content-author h4 {
+  margin: 0;
+}
+
+/* Media Queries */
+@media screen and (max-width: 800px) {
+  header .logo-type {
+    margin-bottom: 10px;
+    font-size: 30px;
+  }
+
+  header .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .main-sport {
+    font-size: 14px;
+  }
+
+  .main-sport .description {
+    max-width: 100%;
+  }
+
+  .sports-events .carousel-container {
+    overflow: visible;
+  }
+
+  .sports-events .carousel-container .carousel {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .sports-events .indicators,
+  .sports-events .left-arrow,
+  .sports-events .right-arrow {
+    display: none;
+  }
+}
+
+#menu-parent {
+  position: relative;
+}
+
+#dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgba(98, 96, 96, 0.81);
+  padding: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  border: 1px solid #ccc;
+  border-top: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  color: #fff;
+}
+
+#menu-parent:hover #dropdown-menu {
+  display: block;
+  opacity: 1;
+}
+
+#dropdown-menu li {
+  padding: 5px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+#dropdown-menu li:last-child {
+  border-bottom: none;
+}
+
+#dropdown-menu li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+#dropdown-menu li a:hover {
+  color: #333;
+}
+
+.repository-link a {
+  color: #ffffff;
+  text-decoration: none;
+  border-bottom: 1px solid #000;
+  font-size: 20px;
+  margin-left: 95px;
+}
+
+.author1 {
+  margin-left: 95px;
+}
+
+.carousel-events {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.event {
+  flex: 0 0 auto;
+  margin-right: 20px;
+  width: 500px;
+}
+
+.separator {
+  margin: 90px;
+  box-shadow: 40 10px #000;
+}
+
+/* Styles for the scroll-down button */
+.scroll-down-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.scroll-down-btn:hover {
+  background-color: #0056b3;
+}
+
+.scroll-down-btn i {
+  margin-right: 5px;
+}

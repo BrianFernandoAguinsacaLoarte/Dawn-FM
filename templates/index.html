@@ -1,0 +1,255 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block contenido %}
+    <style>
+    .btn {
+        width: auto;
+
+        padding: 10px 60px;
+        border-radius: 5px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        margin-bottom: 10px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 12px;
+        padding-right: 28%;
+
+    }
+    .btn1 {
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        margin-bottom: 10px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 100%;
+    }
+    .offcanvas {
+        width: auto;
+        max-width: 23%;
+        padding: 15px;
+
+    }
+
+
+    </style>
+
+    <body class="body">
+
+
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+                <div class="d-flex flex-column">
+
+                    <form id="registrationForm" action="#" method="post">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-link">Agregar Registro</button>
+                        <script>
+                            document.getElementById('registrationForm').addEventListener('submit', function(event) {
+                                event.preventDefault(); // Prevent the form from being submitted
+
+                                // Use JavaScript to set the form's action attribute dynamically
+                                var registroNuevoUrl = '{% url "registroNuevo" %}';
+                                document.getElementById('registrationForm').setAttribute('action', registroNuevoUrl);
+
+                                // Submit the form after setting the action
+                                this.submit();
+                            });
+                        </script>
+                    </form>
+
+                    <form id="jugadorForm" action="#" method="post">
+                        {% csrf_token %}
+
+                        <button type="submit" class="btn btn-link" id="AgregarJugadorButton">Agregar Jugador</button>
+                        <script>
+                            document.getElementById('jugadorForm').addEventListener('submit', function(event) {
+                                event.preventDefault(); // Prevent the form from being submitted
+
+                                // Use JavaScript to set the form's action attribute dynamically
+                                var jugadorNuevoUrl = '{% url "jugadorNuevo" %}';
+                                document.getElementById('jugadorForm').setAttribute('action', jugadorNuevoUrl);
+
+                                // Submit the form after setting the action
+                                this.submit();
+                            });
+                        </script>
+                    </form>
+
+                    <form id="inscripcionForm" action="#" method="post">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-link" id="AgregarInscripcionButton">Agregar Inscripcion</button>
+                        <script>
+                            document.getElementById('inscripcionForm').addEventListener('submit', function(event) {
+                                event.preventDefault(); // Prevent the form from being submitted
+
+                                // Use JavaScript to set the form's action attribute dynamically
+                                var inscripcionNuevaUrl = '{% url "inscripcionNueva" %}';
+                                document.getElementById('inscripcionForm').setAttribute('action', inscripcionNuevaUrl);
+
+                                // Submit the form after setting the action
+                                this.submit();
+                            });
+                        </script>
+                    </form>
+
+                    <form id="equipoForm" action="#" method="post">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-link" id="AgregarEquipoButton">Agregar Equipo</button>
+                        <script>
+                            document.getElementById('equipoForm').addEventListener('submit', function(event) {
+                                event.preventDefault(); // Prevent the form from being submitted
+
+                                // Use JavaScript to set the form's action attribute dynamically
+                                var equipoNuevoUrl = '{% url "equipoNuevo" %}';
+                                document.getElementById('equipoForm').setAttribute('action', equipoNuevoUrl);
+
+                                // Submit the form after setting the action
+                                this.submit();
+                            });
+                        </script>
+                    </form>
+
+                    <form id="sorteoForm" action="#" method="post">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-link" id="AgregarEquipoButton">Agregar Sorteo</button>
+                        <script>
+                            document.getElementById('sorteoForm').addEventListener('submit', function(event) {
+                                event.preventDefault(); // Prevent the form from being submitted
+
+                                // Use JavaScript to set the form's action attribute dynamically
+                                var sorteoNuevoUrl = '{% url "sorteoNuevo" %}';
+                                document.getElementById('sorteoForm').setAttribute('action', sorteoNuevoUrl);
+
+                                // Submit the form after setting the action
+                                this.submit();
+                            });
+                        </script>
+                    </form>
+
+                    <form id="grupoForm" action="#" method="post">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-link" id="AgregarEquipoButton">Agregar Grupo</button>
+                        <script>
+                            document.getElementById('grupoForm').addEventListener('submit', function(event) {
+                                event.preventDefault(); // Prevent the form from being submitted
+
+                                // Use JavaScript to set the form's action attribute dynamically
+                                var grupoNuevoUrl = '{% url "grupoNuevo" %}';
+                                document.getElementById('grupoForm').setAttribute('action', grupoNuevoUrl);
+
+                                // Submit the form after setting the action
+                                this.submit();
+                            });
+                        </script>
+                    </form>
+
+                    <form id="partidoForm" action="#" method="post">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-link" id="AgregarPartidoButton">Agregar Partido</button>
+                        <script>
+                            document.getElementById('partidoForm').addEventListener('submit', function(event) {
+                                event.preventDefault(); // Prevent the form from being submitted
+
+                                // Use JavaScript to set the form's action attribute dynamically
+                                var partidoNuevoUrl = '{% url "partidoNuevo" %}';
+                                document.getElementById('partidoForm').setAttribute('action', partidoNuevoUrl);
+
+                                // Submit the form after setting the action
+                                this.submit();
+                            });
+                        </script>
+                    </form>
+
+                    <form id="marcadorForm" action="#" method="post">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-link" id="AgregarMarcadorButton">Agregar Marcador</button>
+                        <script>
+                            document.getElementById('marcadorForm').addEventListener('submit', function(event) {
+                                event.preventDefault(); // Prevent the form from being submitted
+
+                                // Use JavaScript to set the form's action attribute dynamically
+                                var marcadorNuevoUrl = '{% url "marcadorNuevo" %}';
+                                document.getElementById('marcadorForm').setAttribute('action', marcadorNuevoUrl);
+
+                                // Submit the form after setting the action
+                                this.submit();
+                            });
+                        </script>
+                    </form>
+
+                    <form id="temporadaForm" action="#" method="post">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-link" id="AgregarTemporadaButton">Agregar Temporada</button>
+                        <script>
+                            document.getElementById('temporadaForm').addEventListener('submit', function(event) {
+                                event.preventDefault(); // Prevent the form from being submitted
+
+                                // Use JavaScript to set the form's action attribute dynamically
+                                var temporadaNuevaUrl = '{% url "temporadaNueva" %}';
+                                document.getElementById('temporadaForm').setAttribute('action', temporadaNuevaUrl);
+
+                                // Submit the form after setting the action
+                                this.submit();
+                            });
+                        </script>
+                    </form>
+
+                    <form id="reglamentoForm" action="#" method="post">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-link" id="AgregarReglamentoButton">Visualizar Reglamentos</button>
+                        <script>
+                            document.getElementById('reglamentoForm').addEventListener('submit', function(event) {
+                                event.preventDefault(); // Prevent the form from being submitted
+
+                                // Use JavaScript to set the form's action attribute dynamically
+                                var reglamentoNuevoUrl = '{% url "visualizar_reglamento" %}';
+                                document.getElementById('reglamentoForm').setAttribute('action', reglamentoNuevoUrl);
+
+                                // Submit the form after setting the action
+                                this.submit();
+                            });
+                        </script>
+                    </form>
+
+                    <form id="reglaForm" action="#" method="post">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-link" id="AgregarReglaButton">Visualizar Reglas</button>
+                        <script>
+                            document.getElementById('reglaForm').addEventListener('submit', function(event) {
+                                event.preventDefault(); // Prevent the form from being submitted
+
+                                // Use JavaScript to set the form's action attribute dynamically
+                                var reglaNuevaUrl = '{% url "visualizar_regla" %}';
+                                document.getElementById('reglaForm').setAttribute('action', reglaNuevaUrl);
+
+                                // Submit the form after setting the action
+                                this.submit();
+                            });
+                        </script>
+                    </form>
+                </div>
+
+                <script>
+                    document.getElementById('desplegarFormularios').addEventListener('click', function() {
+                        var formulariosDiv = document.getElementById('formularios');
+
+                        if (formulariosDiv.style.display === 'none') {
+                            formulariosDiv.style.display = 'block';
+                        } else {
+                            formulariosDiv.style.display = 'none';
+                        }
+                    });
+                </script>
+            </div>
+        </div>
+    </body>
+
+{% endblock %}

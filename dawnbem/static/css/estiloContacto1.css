@@ -1,0 +1,28 @@
+body{ 
+    margin: 0%;
+    padding: 0%;
+    background-image: url(https://img.freepik.com/vector-gratis/fondo-acuarela_220290-34.jpg) ;
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+    
+    
+
+
+}
+.alinear{
+   text-align: center;
+   
+    
+}
+.imagenInicio{
+    border: 2px;
+    width: 200px;
+    position:relative;
+    left:30%;
+    right:50%;
+    
+}
+.Centrar{
+    text-align: center;
+}

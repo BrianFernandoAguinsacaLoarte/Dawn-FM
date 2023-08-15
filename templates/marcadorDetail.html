@@ -1,0 +1,80 @@
+{% load static %}
+{% block title %}
+    <title>Detalles del Marcador</title>
+{% endblock %}
+
+{% block contenido %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <header>
+            <nav class="navbar navbar-expand-lg ">
+                <div class="container-fluid">
+                  <a class="navbar-brand enlace-volver" href="{% url 'marcadorNuevo' %}">Volver</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                </div>
+              </nav>
+    </header>
+    <body>
+      <div class="contenedor">
+        <img src="{{ equipo_local.logo }}" alt="{{ equipo_local.nombre }}" id="img1" />
+        <p id="nombre">{{ marcador.nombre_equipo_local}}</p>
+        <p id="versus">VS</p>
+        <img src="{{ equipo_visitante.logo }}" alt="{{ equipo_visitante.nombre }}" id="img2" />
+        <p id="nombre2">{{ marcador.nombre_equipo_visitante }}</p>
+        <p id="marcador">{{ marcador.punto_marcador_local }}<p> - <p>{{ marcador.punto_marcador_visitante }}</p>
+      </div>
+    </body>
+
+    <style>
+
+             body {
+              background: url("{% static 'imagenes/futbolMarcador.jpg' %}") center no-repeat;
+              background-size: cover;
+            }
+            .contenedor {
+              width: 50%;
+              margin: 150px auto auto auto;
+              padding: 50px 10px;
+              background: #3f2844;
+              opacity: 0.8;
+              display: grid;
+              text-align: center;
+              justify-content: center;
+              justify-items: center;
+              grid-template-columns: 296px 75px 296px;
+              grid-template-rows: repeat(2, auto);
+              grid-template-areas:
+                "img1 versus img2"
+                "nombre versus nombre2";
+            }
+            #img1 {
+              grid-area: img1;
+            }
+            #versus {
+              grid-area: versus;
+              padding: 40px 0;
+            }
+            #img2 {
+              grid-area: img2;
+            }
+
+            #nombre {
+              grid-area: nombre;
+            }
+            #nombre2 {
+              grid-area: nombre2;
+            }
+            .contenedor p {
+              color: whitesmoke;
+              font-size: 40px;
+              display: block;
+            }
+            .enlace-volver{
+                color: white;
+            }
+
+    </style>
+{% endblock %}

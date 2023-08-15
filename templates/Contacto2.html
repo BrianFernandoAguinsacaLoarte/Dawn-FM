@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="text/css" rel="stylesheet" href="{% static "css/estiloContacto2.css" %}" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <title>Contacto</title>
+  </head>
+  <body>
+    <section>
+      <div class="contactForm">
+        <div class="form">
+          <div class="texto">
+            <h2>Hablemos!!</h2>
+            <p>Para obtener información sobre nuestras competencias deportivas, inscripciones, fechas y requisitos, comunícate con nuestro equipo. Estamos comprometidos en brindarte apoyo y responder a tus preguntas, ya seas un atleta experimentado o un entusiasta del deporte. Únete al emocionante mundo del deporte con nosotros.</p>
+          </div>
+          <form action="">
+            <div class="inputBox">
+                <label for="">Tu Nombre</label>
+                <input type="text" placeholder="Nombre...">
+            </div>
+            <div class="inputBox">
+                <label for="">Tu Correo</label>
+                <input type="email" placeholder="Correo...">
+            </div>
+            <div class="inputBox">
+                <label for="">Tu Mensaje</label>
+                <textarea name="" id="" cols="30" rows="5" placeholder="Mensaje..."></textarea>
+            </div>
+            <input type="submit" value="Enviar Mensaje">
+          </form>
+        </div>
+        <div class="info">
+            <div class="imgBox">
+                <img src="{% static 'imagenes/email.png.png' %}" alt="Imagen 1">
+            </div>
+            <div class="textBox">
+                <div class="infoContact">
+                    <ion-icon name="map"></ion-icon><p>Universidad Nacional de Loja</p>
+                </div>  
+                <div class="infoContact">    
+                    <ion-icon name="call"></ion-icon> <p>+593986710661</p>
+                </div>
+                <div class="infoContact">
+                    <ion-icon name="mail"></ion-icon> <p>competenciadawnfm@gmail.com</p>
+                </div>
+            </div>
+            <div class="redes">
+                <a href=""><ion-icon name="logo-facebook"></ion-icon></a>
+                <a href=""><ion-icon name="logo-twitter"></ion-icon></a>
+                <a href=""><ion-icon name="logo-instagram"></ion-icon></a>
+            </div>
+        </div>
+      </div>
+    </section>
+    <br>
+    <br>
+    <br>
+    <button  type="button" class="btn btn-primary" id="addPlayerButton">Regresar</button>  <br>
+      <script>
+    
+        // Agregar el evento clic al botón
+        document.getElementById("addPlayerButton").addEventListener("click", function() {
+          // Redirigir a la página jugador.html
+          window.location.href = "{% url 'contacto1' %}";
+        });
+      </script>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>
+|

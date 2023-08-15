@@ -1,0 +1,122 @@
+/* CSS for the Torneo de Fútbol page */
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: radial-gradient(circle at 30.04% 92.81%, #f7fcf4 0, #f6fcf5 5.56%, #f5fcf5 11.11%, #f4fdf6 16.67%, #f3fdf7 22.22%, #f2fdf9 27.78%, #f1fdfa 33.33%, #f1fdfb 38.89%, #f0fdfc 44.44%, #f0fdfd 50%, #f0fdfe 55.56%, #f0fdff 61.11%, #f0fdff 66.67%, #f1fcff 72.22%, #f2fcff 77.78%, #f2fcff 83.33%, #f3fcff 88.89%, #f4fbff 94.44%, #f5fbff 100%);}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    margin-top: 20px;
+}
+
+form {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+label {
+    margin-right: 10px;
+}
+
+#team-name {
+    flex: 1;
+}
+
+button {
+    margin-left: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#groups-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#groups-container ul {
+    flex: 1;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+#matches-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#matches-table th,
+#matches-table td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #ccc;
+}
+
+#matches-table th {
+    background-color: #f2f2f2;
+}
+
+/* Colors for headings and containers */
+h2 {
+    color: #333;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+
+#groups-container h3 {
+    color: #333;
+    margin-top: 0;
+}
+
+/* Colors for teams and matches */
+ul li {
+    color: #007BFF;
+}
+
+#matches-table td {
+    color: #555;
+}
+
+/* Colors for buttons and form */
+#team-form button {
+    background-color: #007BFF;
+}
+
+#team-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Colors for table header */
+#matches-table th {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+/* Colors for odd and even rows in the table */
+#matches-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#matches-table tr:nth-child(odd) {
+    background-color: #fff;
+}

@@ -1,0 +1,84 @@
+
+{% block title %}
+    <title>Registro: {{ jugador.registro.nombre }}</title>
+{% endblock %}
+
+{% block contenido %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <header>
+            <nav class="navbar navbar-expand-lg ">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="{% url 'jugadorNuevo' %}">Volver</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                </div>
+              </nav>
+    </header>
+    <h1>Contenido del Jugador: {{ jugador.registro.nombre }}</h1>
+
+    <table class="table table-warning table-striped-columns">
+        <thead>
+            <tr>
+                <th>Nombre:</th>
+                <th>Apellido:</th>
+                <th>Edad:</th>
+                <th>Deporte:</th>
+                <th>Rol:</th>
+                <th>Número de Camiseta:</th>
+                <th>Posición:</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ jugador.registro.nombre }}</td>
+                <td>{{ jugador.registro.apellido }}</td>
+                <td>{{ jugador.registro.edad }}</td>
+                <td>{{ jugador.registro.EscogerDeporte }}</td>
+                <td>{{ jugador.registro.EleccionDeRol }}</td>
+                <td>{{ jugador.numero_Camiseta }}</td>
+                <td>{{ jugador.posicion }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+     <style>
+              body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+          }
+
+          h1 {
+            text-align: center;
+          }
+
+          form {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+          }
+
+          label {
+            display: block;
+            margin-top: 10px;
+          }
+
+          input,
+          select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+          }
+    </style>
+{% endblock %}

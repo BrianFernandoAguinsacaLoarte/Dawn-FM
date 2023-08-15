@@ -1,0 +1,62 @@
+.carousel-inner{
+    max-height: 39rem;
+    position: relative;
+}
+
+.navbar{
+    background-color: #68ea70;
+}
+
+.span1{
+    color: black;
+    border: 2px solid rgb(125, 205, 94);
+    border-radius: 5px;
+    padding: 0px;
+    margin: 2px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    background-color: rgb(125, 205, 94);
+}
+.navbar-brand{
+    color: white;
+    border: 2px solid rgb(125, 205, 94);
+    border-radius: 7px;
+    padding: 8px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    background-image: radial-gradient(circle at 19.87% 19.87%, #a86fd8 0, #b768ce 5.56%, #c462c3 11.11%, #cf5db8 16.67%, #d858ab 22.22%, #df549e 27.78%, #e55191 33.33%, #e85083 38.89%, #e95176 44.44%, #e95369 50%, #e7575c 55.56%, #e45b50 61.11%, #df6044 66.67%, #d96639 72.22%, #d26c2e 77.78%, #ca7123 83.33%, #c17717 88.89%, #b77c0b 94.44%, #ac8100 100%);
+}
+
+h1{
+    color: black;
+    font-size: 1.8rem;
+    text-align: center;
+    font-weight: bold;
+    padding: 1px;
+    text-decoration: underline;
+}
+
+.container-fluid{
+    font-weight: bold;
+}
+
+.imagen{
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+}
+
+.card{
+    
+    float: left;
+    border-radius: 5px;
+    padding: 0px;
+    margin: 2px;
+    font-size: 0.9rem;
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(78,192,165,1) 20%, rgba(116,245,230,1) 26%, rgba(253,187,45,1) 100%);
+}
+
+
+
+

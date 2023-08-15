@@ -1,0 +1,12 @@
+
+{% load socialaccount %}
+{% providers_media_js %}
+{% load  i18n %}
+{% block login_block %}
+{% if user.is_authenticated %}
+estoy autenticado
+{% endif %}
+{% endblock %}
+
+
+```

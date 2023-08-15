@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ titulo }}
+{% endblock %}
+
+{% block contenido %}
+    <body class="body">
+    <h1>{{ contenido1 }}</h1>
+    <h1>Reglamento</h1>
+
+    <form id="registrationForm" action="#" method="post">
+    {% csrf_token %}
+
+    <div id="playersContainer">
+      <div class="player">
+
+        <label for="nombreReglamento">Nombre:</label>
+        <input type="text" id="nombreReglamento" name="nombreReglamento">
+
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" name="fecha">
+      </div>
+    </div>
+
+     <button type="button" id="ReglaButton">Agregar Regla</button>
+    <script>
+        document.getElementById('registrationForm').addEventListener('dblclick', function(event) {
+            event.preventDefault(); // Prevent the form from being submitted
+
+            // Use JavaScript to set the form's action attribute dynamically
+            var reglaUrl = '{% url "Regla" %}';
+            document.getElementById('registrationForm').setAttribute('action', reglaUrl);
+
+            // Submit the form after setting the action
+            this.submit();
+        });
+
+      </script>
+        <br>
+
+      <button type="submit" id="ReglamentoButton">Agregar Reglamento</button>
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from being submitted
+
+            // Use JavaScript to set the form's action attribute dynamically
+            var temporadaUrl = '{% url "Temporada" %}';
+            document.getElementById('registrationForm').setAttribute('action', temporadaUrl);
+
+            // Submit the form after setting the action
+            this.submit();
+        });
+
+      </script>
+    </form>
+    </body>
+{% endblock %}

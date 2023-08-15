@@ -1,0 +1,179 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+{% block title %}
+{% endblock %}
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+    <link rel="shortcut icon" href="{% static "imagenes/icono.png" %}"/>
+      <link rel="icon" href="{% static "imagenes/LogoUNL.png" %}" />
+    <link rel="stylesheet" href="{% static "css/main.css" %}">
+    <title>Ping Pong</title>
+  </head>
+
+{% block contenido %}
+  <body>
+    
+    <nav class="navbar navbar-expand-lg fs-5">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Ping Pong </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'registroNuevo' %}">Registro</a>
+              </li>
+              <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+                <a href="#" id="menuLink1" class="pure-menu-link">Contáctanos</a>
+                <ul class="pure-menu-children">
+                    <li class="pure-menu-item">
+                        <a href="mailto:competenciadawnfm@gmail.com" class="pure-menu-link">Gmail</a>
+                    </li>
+                    <li class="pure-menu-item">
+                        <a href="{% url 'contacto1' %}" class="pure-menu-link">Contacto</a>
+                    </li>
+                </ul>
+              </li>
+            </ul>
+          
+          </div>
+        </div>
+      </nav>
+      <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="{% static "imagenes/pinpon1.jpg" %}" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="{% static "imagenes/pinpon2.jpg" %}" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="{% static "imagenes/pinpon3.jpg" %}" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="{% static "imagenes/pinpon4.jpg" %}" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <div class="pt-5">
+        <div class="card" style="width: 18rem;">
+          <img src="{% static "imagenes/unl.jpg" %}" class="card-img-top" alt="...">
+          <div class="card-body text-center">
+              <h5 class="card-title">Universidad Nacional de Loja</h5>
+              <p class="card-text">La Universidad Nacional de Loja (UNL) es una universidad pública ubicada en 
+                  la ciudad de Loja, Ecuador. Es una institución de educación superior laica, autónoma, sin fines 
+                  de lucro, que ofrece formación de nivel superior técnico y tecnológico, profesional o de tercer 
+                  nivel, y de posgrado o de cuarto nivel. La universidad tiene 37 programas de pregrado desplegados 
+                  en cinco facultades. También ofrece ocho programas de aprendizaje a distancia. La universidad 
+                  promueve servicios de salud, becas y apoyo institucional integral para toda la comunidad universitaria.</p>
+              <a href="https://unl.edu.ec/" class="btn btn-primary">Visitar</a>
+          </div>
+      </div>
+      
+    </div>
+    
+      <section class="w-50 mx-auto text-center pt-5">
+        <h1> Competencias deportivas Universidad Nacional de Loja <span class="span1">PING PONG</span></h1>
+        <p class="fs-5"> Sumérgete en el emocionante mundo del tenis de mesa, 
+            también conocido como "ping-pong". Nuestra página web está dedicada a proporcionarte información 
+            detallada sobre este apasionante deporte de raqueta. 
+            Desde sus orígenes hasta las reglas y técnicas más avanzadas, aquí encontrarás todo lo que 
+            necesitas saber sobre el tenis de mesa.</p>
+
+        <img class="imagen" src="https://th.bing.com/th/id/R.832e595b7131bd4b73f4d267e448fcef?rik=51wHDUUZsSzTBw&riu=http%3a%2f%2fmedia.giphy.com%2fmedia%2fSwRyILPR4S6Ig%2fgiphy.gif&ehk=qEQowDXizH8aZuW0w11ocYIyy5dI%2flgIdNOE7JntRz8%3d&risl=&pid=ImgRaw&r=0" alt="">
+        
+        <div class="p-5">
+        
+          <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasExampleLabel">Inicia Sesión</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <div>
+                <form>
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Gmail</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text">Nunca compartiremos tu correo electrónico con nadie más.</div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                  </div>
+                  
+                  <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+                </form>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        <div class="accordion accordion-flush p-5" id="accordionFlushExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                ¿Cuál es el objetivo principal del juego de ping pong?
+              </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">El objetivo principal del ping pong, también conocido como tenis 
+                de mesa, es anotar puntos al hacer que la pelota rebote sobre la mesa y pase al campo contrario sin 
+                que el oponente pueda devolverla de manera válida. Los jugadores utilizan raquetas para golpear la 
+                pelota sobre la red y tratar de ganar puntos al hacer que la pelota toque el lado del oponente.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                ¿Cuántos puntos se necesitan para ganar un set en el ping pong?
+              </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">En la mayoría de los formatos de juego de ping pong, un set se juega hasta 11 puntos. Sin embargo, el jugador debe ganar por al menos 2 puntos de 
+                diferencia. Si el marcador llega a 10-10, el set continúa hasta que uno de los jugadores tenga una ventaja de 2 puntos. El primer jugador en alcanzar 11 puntos (o más, con 
+                la diferencia de 2 puntos) gana el set.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                ¿Cuál es la regla de saque en el ping pong?
+              </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">En el saque de ping pong, el jugador debe lanzar la pelota verticalmente hacia arriba desde la palma de la mano libre y golpearla con la raqueta cuando 
+                desciende. El saque debe tocar primero la propia mitad de la mesa antes de pasar sobre la red y luego tocar el campo del oponente. Además, el saque debe ser visible para el oponente 
+                en todo momento y no puede ocultarse detrás del cuerpo. Las reglas varían en cuanto a cómo la pelota debe rebotar en el lado del receptor después de cruzar la red.</div>
+            </div>
+          </div>
+        </div>
+        </section>
+        
+      <header class="container-fluid bg-danger bg-gradient d-flex justify-content-center">
+        <p class="text-light mb-0 p-2 fs-6">Contactanos +593 96 420 9135</p>
+    </header>
+            
+  </body>
+    </html>
+{% endblock %}
+  <script src="{% static "js/pinpon.js" %}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
